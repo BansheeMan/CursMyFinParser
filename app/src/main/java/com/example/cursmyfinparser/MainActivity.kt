@@ -18,7 +18,6 @@ class MainActivity : AppCompatActivity() {
 
 
         Thread { getWeb() }.start()
-        //binding.textView.text =  doc.title().toString()
         Log.d("@@@", "####################################")
 
     }
@@ -36,6 +35,7 @@ class MainActivity : AppCompatActivity() {
         Log.d("@@@", "####################################")
         Log.d("@@@", "${elem_dollar}")
 
+        runOnUiThread { binding.textView.text = elementsFromTable }
 
     }
 }
